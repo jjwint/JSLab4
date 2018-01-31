@@ -20,7 +20,4 @@
 		messageEl.innerText = newMessage;
 	}
 
-
-
-
 });

@@ -1,0 +1,38 @@
+#playerStats {
+	display: flex;
+	justify-content: space-around;
+}
+
+#enemyStats {
+	display: flex;
+	justify-content: space-around;
+}
+
+h2 {
+	text-align: center;
+}
+
+button {
+	background-color: blue;
+	color: #FFF;
+	width: 100px;
+	height: 50px;
+	font-size: 18px;
+	border: 2px solid #000;
+}
+
+#buttons {
+	text-align: center;
+}
+
+#statsBorder {
+	border: 2px solid black;
+}
+
+#userProgress {
+	text-align: center;
+}
+
+#enemyProgress {
+	text-align: center;
+}
