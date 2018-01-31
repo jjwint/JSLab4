@@ -1,3 +1,8 @@
+#start {
+	text-align: center;
+}
+
+
 #playerStats {
 	display: flex;
 	justify-content: space-around;
@@ -35,4 +40,8 @@ button {
 
 #enemyProgress {
 	text-align: center;
+}
+
+#hidden {
+	display: none;
 }

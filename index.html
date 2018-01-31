@@ -6,44 +6,48 @@
 	<title>JavaScript Lab pt. 4</title>
 </head>
 <body>
-	<main>
-		<div id="buttons">
-			<button id="attackButton">ATTACK</button>
-			<button id="healButton">HEAL</button>
-			<button id="quitButton">QUIT</button>
-		</div>
-		<p id="message"></p>
-		
-		</main>
-		
-		<div id="statsBorder">
-			<h2>Player Stats</h2>
-		
-			<div id="playerStats">
-				<p>Name</p>
-				<p>Health</p>
-				<p>Heal Count</p>
-				<p>Wins</p>
+	<div id="start">
+		<button id="startButton">START</button>
+	</div>
+	<div id="hidden">
+		<main>
+			<div id="buttons">
+				<button id="attackButton">ATTACK</button>
+				<button id="healButton">HEAL</button>
+				<button id="quitButton">QUIT</button>
 			</div>
+			<p id="message"></p>
+			
+			</main>
+			
+			<div id="statsBorder">
+				<h2>Player Stats</h2>
+			
+				<div id="playerStats">
+					<p>Name</p>
+					<p>Health</p>
+					<p>Heal Count</p>
+					<p>Wins</p>
+				</div>
 
-			<div id="userProgress">
-				<progress id="userHealth" value="40" max="40"></progress>
-				<progress id="healCount" value="2" max="2"></progress>
-				<progress id="userWins" value="0" max="5"></progress>
+				<div id="userProgress">
+					<progress id="userHealth" value="40" max="40"></progress>
+					<progress id="healCount" value="2" max="2"></progress>
+					<progress id="userWins" value="0" max="5"></progress>
+				</div>
+			
+				<h2>Enemy Stats</h2>
+			
+				<div id="enemyStats">
+					<p>Name</p>
+					<p>Health</p>
+				</div>
+				<div id="enemyProgress">
+					<progress id="enemyHealth" value="10" max="10"></progress>
+				</div>
+			
 			</div>
-		
-			<h2>Enemy Stats</h2>
-		
-			<div id="enemyStats">
-				<p>Name</p>
-				<p>Health</p>
-			</div>
-			<div id="enemyProgress">
-				<progress id="enemyHealth" value="10" max="10"></progress>
-			</div>
-		
-		</div>
-
+	</div>
 	<script src="script.js"></script>
 </body>
 </html>
