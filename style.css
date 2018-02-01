@@ -42,6 +42,10 @@ button {
 	text-align: center;
 }
 
-#hidden {
+.hidden {
+	display: none;
+}
+
+.hideStart {
 	display: none;
 }
