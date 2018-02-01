@@ -3,12 +3,12 @@
 }
 
 
-#playerStats {
+#characterStats {
 	display: flex;
 	justify-content: space-around;
 }
 
-#enemyStats {
+#grantStats {
 	display: flex;
 	justify-content: space-around;
 }
@@ -34,11 +34,11 @@ button {
 	border: 2px solid black;
 }
 
-#userProgress {
+#characterProgress {
 	text-align: center;
 }
 
-#enemyProgress {
+#grantProgress {
 	text-align: center;
 }
 
