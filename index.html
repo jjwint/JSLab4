@@ -24,28 +24,31 @@
 				<h2>Player Stats</h2>
 			
 				<div id="characterStats">
-					<p>Name: <span id="userName"></span></p>
-					<p>Health</p>
-					<p>Heal Count</p>
-					<p>Wins</p>
-				</div>
+					<div>
+						<p>Name: <span id="userName"></span></p>
 
-				<div id="characterProgress">
-					<progress class="progressBars" id="characterHealth" value="40" max="40"></progress>
-					<progress class="progressBars" id="healCount" value="2" max="2"></progress>
-					<progress class="progressBars" id="userWins" value="0" max="5"></progress>
+					</div>
+					<div class="center">
+						<p>Health</p>
+						<progress class="progressBars" id="characterHealth" value="40" max="40"></progress>
+					</div>
+					<div class="center">
+						<p>Heal Count</p>
+						<progress class="progressBars" id="healCount" value="2" max="2"></progress>
+					</div>
+					<div class="center">
+						<p>Wins</p>
+						<progress class="progressBars" id="userWins" value="0" max="5"></progress>
+					</div>
 				</div>
-			
 				<h2>Enemy Stats</h2>
-			
 				<div id="grantStats">
 					<p>Name</p>
-					<p>Health</p>
+					<div class="center">
+						<p>Health</p>
+						<progress id="grantHealth" value="10" max="10"></progress>
+					</div>
 				</div>
-				<div id="grantProgress">
-					<progress id="grantHealth" value="10" max="10"></progress>
-				</div>
-			
 			</div>
 	</div>
 	<script src="script.js"></script>

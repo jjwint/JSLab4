@@ -86,12 +86,6 @@
 	} else if (grant.health <= 0 && user.wins >= 5) {
 		updateMessage(userName + " is the winner!");
 	}
-	
-
-	// if (grant.health <= 0) {
-	// 	character.wins++;
-	// 	userWinsBar.value++;
-	// }
 
 })();
 
