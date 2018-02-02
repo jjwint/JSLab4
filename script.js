@@ -32,15 +32,16 @@
 	var grantHealthBar = document.getElementById("grantHealth");
 	var messageEl = document.getElementById("message");
 	var mainGame = document.getElementById("mainGame");
-	var getUserName = document.getElementById("userName");
+	var elUserName = document.getElementById("userName");
+	var userName;
 
 	
 	
 	startButton.onclick = function() {
-		var userName = prompt("What do you want to name your character?");
+		userName = prompt("What do you want to name your character?");
 		startButton.classList.add("hideStart");
 		mainGame.classList.remove("hidden");
-
+		elUserName.innerHTML = userName;
 	};
 
 	attackButton.onclick = function() {
@@ -81,7 +82,7 @@
 		messageEl.innerText = newMessage;
 	};
 
-	if (character.health <= 0) {
+	if (userHealthBar.value <= 0) {
 		updateMessage("The Almighty Grant is the winner!");
 	} else if (grant.health <= 0 && user.wins >= 5) {
 		updateMessage(userName + " is the winner!");
