@@ -33,27 +33,37 @@
 	var messageEl = document.getElementById("message");
 	var mainGame = document.getElementById("mainGame");
 	var elUserName = document.getElementById("userName");
+	var userHealthEl = document.getElementById("userHealth");
+	var userHealsEl = document.getElementById("userHeals");
+	var userWinsEl = document.getElementById("userWinsNum");
 	var userName;
 
-	
 	
 	startButton.onclick = function() {
 		userName = prompt("What do you want to name your character?");
 		startButton.classList.add("hideStart");
 		mainGame.classList.remove("hidden");
 		elUserName.innerHTML = userName;
+		userHealthEl.innerHTML = character.health;
+		userHealsEl.innerHTML = character.heals;
+		userWinsEl.innerHTML = character.wins;
+		updateDisplay();
 	};
 
 	attackButton.onclick = function() {
-		character.health -= grant.generateAttackDamage();
-		grant.health -= character.generateAttackDamage();
-		updateDisplay();
-		updateMessage("That's gotta hurt!");
-		if (grant.health <= 0) {
-			character.wins++;
-			userWinsBar.value++;
-			grant.health = 10;
+		if (character.health > 0) {
+			character.health -= grant.generateAttackDamage();
+			grant.health -= character.generateAttackDamage();
 			updateDisplay();
+			updateMessage("That's gotta hurt!");
+			if (grant.health <= 0) {
+				character.wins++;
+				// userWinsBar.value++;
+				grant.health = 10;
+				updateDisplay();
+			}
+		} else if (character.health <= 0) {
+			updateMessage("I'm sorry, you lose!");
 		}
 	};
 
@@ -69,6 +79,7 @@
 
 	quitButton.onclick = function() {
 		mainGame.classList.add("hidden");
+		startButton.classList.remove("hideStart");
 	}
 
 	function updateDisplay() {
@@ -76,31 +87,19 @@
 		grantHealthBar.value = grant.health;
 		healCountBar.value = character.healsRemaining;
 		userWinsBar.value = character.wins;
+		userHealthEl.innerHTML = character.health;
+		userHealsEl.innerHTML = character.healsRemaining;
+		userWinsEl.innerHTML = character.wins;
 	};
 
 	function updateMessage(newMessage) {
 		messageEl.innerText = newMessage;
 	};
 
-	if (userHealthBar.value <= 0) {
+	if (character.health <= 0) {
 		updateMessage("The Almighty Grant is the winner!");
 	} else if (grant.health <= 0 && user.wins >= 5) {
 		updateMessage(userName + " is the winner!");
 	}
 
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
