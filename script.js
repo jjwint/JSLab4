@@ -36,6 +36,7 @@
 	var userHealthEl = document.getElementById("userHealth");
 	var userHealsEl = document.getElementById("userHeals");
 	var userWinsEl = document.getElementById("userWinsNum");
+	var enemyHealthEl = document.getElementById("enemyHealth");
 	var userName;
 
 	
@@ -90,6 +91,7 @@
 		userHealthEl.innerHTML = character.health;
 		userHealsEl.innerHTML = character.healsRemaining;
 		userWinsEl.innerHTML = character.wins;
+		enemyHealthEl.innerHTML = grant.health;
 	};
 
 	function updateMessage(newMessage) {

@@ -1,54 +1,49 @@
 body {
-	background-color: #ccebff;
+	/* background: linear-gradient(to right, #ee9ca7, #ffdde1); */
+	background-color: #F0F3BD;
 }
 
 #start {
 	text-align: center;
 }
 
+#statsContainer {
+	/* border: 2px solid black; */
+	/* display: flex;
+	justify-content: space-around; */
+}
 
 #characterStats {
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
 }
 
 #grantStats {
 	display: flex;
-	justify-content: space-around;
-}
-
-#characterProgress {
-	display: flex;
-	justify-content: flex-end;
+	/* justify-content: space-around; */
+	flex-direction: column;
 }
 
 h2 {
 	text-align: center;
 }
 
-button {
-	background-color: blue;
+h3 {
+	text-align: center;
+}
+
+#buttonDiv {
+	text-align: center;
+}
+
+.buttons {
+	background-color: #00A896;
 	color: #FFF;
-	width: 100px;
-	height: 50px;
+	width: 200px;
+	height: 80px;
 	font-size: 18px;
 	border: 2px solid #000;
-}
-
-#buttons {
-	text-align: center;
-}
-
-#statsBorder {
-	border: 2px solid black;
-}
-
-#characterProgress {
-	text-align: center;
-}
-
-#grantProgress {
-	text-align: center;
+	border-radius: 10px;
 }
 
 .hidden {
@@ -62,17 +57,3 @@ button {
 .center {
 	text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

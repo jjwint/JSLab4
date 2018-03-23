@@ -7,45 +7,47 @@
 </head>
 <body>
 	<div id="start">
-		<button id="startButton">START</button>
+		<button id="startButton" class="buttons">START</button>
 	</div>
 	<div id="mainGame" class="hidden">
 		<main>
-			<div id="buttons">
-				<button id="attackButton">ATTACK</button>
-				<button id="healButton">HEAL</button>
-				<button id="quitButton">QUIT</button>
+			<div id="buttonDiv">
+				<button class="buttons" id="attackButton">ATTACK</button>
+				<button class="buttons" id="healButton">HEAL</button>
+				<button class="buttons" id="quitButton">QUIT</button>
 			</div>
-			<p id="message"></p>
-			
+			<h3 id="message"></h3>
 			</main>
-			
-			<div id="statsBorder">
-				<h2>Player Stats</h2>
-			
-				<div id="characterStats">
-					<div>
-						<p>Name: <span id="userName"></span></p>
-					</div>
-					<div class="center">
-						<p>Health: <span id="userHealth"></span></p>
-						<progress class="progressBars" id="characterHealth" value="40" max="40"></progress>
-					</div>
-					<div class="center">
-						<p>Heal Count: <span id="userHeals"></span></p>
-						<progress class="progressBars" id="healCount" value="2" max="2"></progress>
-					</div>
-					<div class="center">
-						<p>Wins: <span id="userWinsNum"></span></p>
-						<progress class="progressBars" id="userWins" value="0" max="5"></progress>
+
+			<div id="statsContainer">
+				<div>
+					<h2>User Stats</h2>
+					<div id="characterStats">
+						<div class="center">
+							<p>Name: <span id="userName"></span></p>
+						</div>
+						<div class="center">
+							<p>Health: <span id="userHealth"></span></p>
+							<progress class="progressBars" id="characterHealth" value="40" max="40"></progress>
+						</div>
+						<div class="center">
+							<p>Heal Count: <span id="userHeals"></span></p>
+							<progress class="progressBars" id="healCount" value="2" max="2"></progress>
+						</div>
+						<div class="center">
+							<p>Wins: <span id="userWinsNum"></span></p>
+							<progress class="progressBars" id="userWins" value="0" max="5"></progress>
+						</div>
 					</div>
 				</div>
-				<h2>Enemy Stats</h2>
-				<div id="grantStats">
-					<p>Name</p>
-					<div class="center">
-						<p>Health</p>
-						<progress id="grantHealth" value="10" max="10"></progress>
+				<div>
+					<h2>Enemy Stats</h2>
+					<div id="grantStats">
+						<p class="center">Name: Grant the Almighty</p>
+						<div class="center">
+							<p>Enemy Health: <span id="enemyHealth"></span></p>
+							<progress id="grantHealth" value="10" max="10"></progress>
+						</div>
 					</div>
 				</div>
 			</div>
