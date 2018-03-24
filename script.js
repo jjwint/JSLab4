@@ -22,7 +22,7 @@
 		}
 	};
 
-	var startButton = document.getElementById("start");
+	var startButton = document.getElementById("startButton");
 	var attackButton = document.getElementById("attackButton");
 	var healButton = document.getElementById("healButton");
 	var quitButton = document.getElementById("quitButton");
@@ -37,12 +37,13 @@
 	var userHealsEl = document.getElementById("userHeals");
 	var userWinsEl = document.getElementById("userWinsNum");
 	var enemyHealthEl = document.getElementById("enemyHealth");
+	var userNameEl = document.getElementById("userNameInput")
 	var userName;
 
 
 	startButton.onclick = function() {
-		userName = prompt("What do you want to name your character?");
-		startButton.classList.add("hideStart");
+		// userName = prompt("What do you want to name your character?");
+		start.classList.add("hideStart");
 		mainGame.classList.remove("hidden");
 
 		elUserName.innerHTML = userName;
@@ -81,7 +82,7 @@
 
 	quitButton.onclick = function() {
 		mainGame.classList.add("hidden");
-		startButton.classList.remove("hideStart");
+		start.classList.remove("hideStart");
 	}
 
 	function updateDisplay() {

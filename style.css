@@ -91,11 +91,23 @@ h3 {
 	margin-top: 5px;
 	border-radius: 10px;
 	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 
 	/* background-color: #F9BE02;
 	background-color: #02C8A7; */
 }
 
+progress {
+	position: relative;
+	transform: translateY(100%);
+}
+
 progress[value] {
 	/* background-color: blue; */
+}
+
+#userNameInput {
+	font-size: 50%;
 }
