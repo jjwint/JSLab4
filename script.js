@@ -32,21 +32,31 @@
 	var grantHealthBar = document.getElementById("grantHealth");
 	var messageEl = document.getElementById("message");
 	var mainGame = document.getElementById("mainGame");
-	var elUserName = document.getElementById("userName");
+	// var elUserName = document.getElementById("userName");
 	var userHealthEl = document.getElementById("userHealth");
 	var userHealsEl = document.getElementById("userHeals");
 	var userWinsEl = document.getElementById("userWinsNum");
 	var enemyHealthEl = document.getElementById("enemyHealth");
-	var userNameEl = document.getElementById("userNameInput")
+	var userNameEl = document.getElementById("userName")
 	var userName;
+	var attackMessages = [
+		"That's gotta hurt!",
+		"Ouch!",
+		"You better run!",
+		"Have mercy!"
+	];
 
+	function getAttackMessage(){
+		var randomNum = Math.floor(Math.random() * attackMessages.length) - 1;
+		return attackMessages[randomNum];
+	}
 
 	startButton.onclick = function() {
 		// userName = prompt("What do you want to name your character?");
 		start.classList.add("hideStart");
 		mainGame.classList.remove("hidden");
 
-		elUserName.innerHTML = userName;
+		userNameEl.innerHTML = userNameInput.value;
 		userHealthEl.innerHTML = character.health;
 		userHealsEl.innerHTML = character.heals;
 		userWinsEl.innerHTML = character.wins;
@@ -58,10 +68,9 @@
 			character.health -= grant.generateAttackDamage();
 			grant.health -= character.generateAttackDamage();
 			updateDisplay();
-			updateMessage("That's gotta hurt!");
+			updateMessage(getAttackMessage());
 			if (grant.health <= 0) {
 				character.wins++;
-				// userWinsBar.value++;
 				grant.health = 10;
 				updateDisplay();
 			}
@@ -83,6 +92,7 @@
 	quitButton.onclick = function() {
 		mainGame.classList.add("hidden");
 		start.classList.remove("hideStart");
+		reset();
 	}
 
 	function updateDisplay() {
@@ -104,6 +114,15 @@
 		updateMessage("The Almighty Grant is the winner!");
 	} else if (grant.health <= 0 && user.wins >= 5) {
 		updateMessage(userName + " is the winner!");
+	}
+
+	function reset() {
+		character.name = null;
+		character.health = 40;
+		character.healsRemaining = 2;
+		character.wins = 0;
+		updateMessage("");
+
 	}
 
 })();
