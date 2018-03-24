@@ -22,7 +22,7 @@
 		}
 	};
 
-	var startButton = document.getElementById("startButton");
+	var startButton = document.getElementById("start");
 	var attackButton = document.getElementById("attackButton");
 	var healButton = document.getElementById("healButton");
 	var quitButton = document.getElementById("quitButton");
@@ -44,6 +44,7 @@
 		userName = prompt("What do you want to name your character?");
 		startButton.classList.add("hideStart");
 		mainGame.classList.remove("hidden");
+
 		elUserName.innerHTML = userName;
 		userHealthEl.innerHTML = character.health;
 		userHealsEl.innerHTML = character.heals;
