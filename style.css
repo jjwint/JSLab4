@@ -8,6 +8,11 @@ body {
 	text-align: center;
 }
 
+#startButton {
+	margin-top: 50%;
+	width: 100%;
+}
+
 #statsContainer {
 	/* border: 2px solid black; */
 	/* display: flex;
@@ -84,7 +89,7 @@ h3 {
 	margin-top: 5px;
 	border-radius: 10px;
 	height: 40px;
-	line-height: normal;
+
 	/* background-color: #F9BE02;
 	background-color: #02C8A7; */
 }
