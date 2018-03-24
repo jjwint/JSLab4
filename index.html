@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Lato" rel="stylesheet">
 	<link rel="stylesheet" href="style.css" />
 	<title>JavaScript Lab pt. 4</title>
 </head>
@@ -21,28 +22,28 @@
 
 			<div id="statsContainer">
 				<div>
-					<h2>User Stats</h2>
 					<div id="characterStats">
-						<div class="center">
+						<h2>User Stats</h2>
+						<div class="center userStat">
 							<p>Name: <span id="userName"></span></p>
 						</div>
-						<div class="center">
+						<div class="center userStat">
 							<p>Health: <span id="userHealth"></span></p>
 							<progress class="progressBars" id="characterHealth" value="40" max="40"></progress>
 						</div>
-						<div class="center">
+						<div class="center userStat">
 							<p>Heal Count: <span id="userHeals"></span></p>
 							<progress class="progressBars" id="healCount" value="2" max="2"></progress>
 						</div>
-						<div class="center">
+						<div class="center userStat">
 							<p>Wins: <span id="userWinsNum"></span></p>
 							<progress class="progressBars" id="userWins" value="0" max="5"></progress>
 						</div>
 					</div>
 				</div>
 				<div>
-					<h2>Enemy Stats</h2>
 					<div id="grantStats">
+						<h2>Enemy Stats</h2>
 						<p class="center">Name: Grant the Almighty</p>
 						<div class="center">
 							<p>Enemy Health: <span id="enemyHealth"></span></p>

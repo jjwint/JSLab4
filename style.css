@@ -1,6 +1,7 @@
 body {
 	/* background: linear-gradient(to right, #ee9ca7, #ffdde1); */
-	background-color: #F0F3BD;
+	background-color: #7CDBD5;
+	COLOR: #FFF;
 }
 
 #start {
@@ -11,25 +12,43 @@ body {
 	/* border: 2px solid black; */
 	/* display: flex;
 	justify-content: space-around; */
+	font-family: 'Lato', sans-serif;
 }
 
 #characterStats {
 	display: flex;
 	flex-direction: column;
+	border: 4px solid #02C8A7;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-radius: 10px;
+	padding: 0 10px 10px 10px;
 }
 
 #grantStats {
+	margin-top: 10px;
 	display: flex;
 	/* justify-content: space-around; */
 	flex-direction: column;
+	border: 2px solid #02C8A7;
+	border-radius: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 0 10px 10px 10px;
 }
 
 h2 {
 	text-align: center;
+	color: #F53240;
+	font-family: 'Anton', sans-serif;
+	border-bottom: 2px solid #F53240;
+	margin-right: 10%;
+	margin-left: 10%;
 }
 
 h3 {
 	text-align: center;
+	font-family: 'Anton', sans-serif;
 }
 
 #buttonDiv {
@@ -37,12 +56,12 @@ h3 {
 }
 
 .buttons {
-	background-color: #00A896;
+	background-color: #F53240;
 	color: #FFF;
-	width: 200px;
-	height: 80px;
+	width: 100px;
+	height: 50px;
 	font-size: 18px;
-	border: 2px solid #000;
+	border: 2px solid #FFF;
 	border-radius: 10px;
 }
 
@@ -56,4 +75,20 @@ h3 {
 
 .center {
 	text-align: center;
+}
+
+.userStat {
+	border: 2px solid #02C8A7;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 5px;
+	border-radius: 10px;
+	height: 40px;
+	line-height: normal;
+	/* background-color: #F9BE02;
+	background-color: #02C8A7; */
+}
+
+progress[value] {
+	/* background-color: blue; */
 }

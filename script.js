@@ -39,7 +39,7 @@
 	var enemyHealthEl = document.getElementById("enemyHealth");
 	var userName;
 
-	
+
 	startButton.onclick = function() {
 		userName = prompt("What do you want to name your character?");
 		startButton.classList.add("hideStart");
@@ -69,7 +69,7 @@
 	};
 
 	healButton.onclick = function() {
-		if (character.healsRemaining > 0) {
+		if ((character.healsRemaining > 0) && (character.health > 0)) {
 			character.heal();
 			updateMessage("You have been healed");
 			updateDisplay();
